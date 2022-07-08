@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'splash#index'
  resources :splash, only: [:index]
- resources :categories, only: [:index, :new, :create, :destroy]
- 
+ resources :categories, only: [:index, :new, :create, :destroy] do
+  resources :exchanges, only: [:index, :new, :create, :destroy]
+end
 end
