@@ -1,0 +1,91 @@
+.category-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .category-btn {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: #d6a907;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .actions {
+    width: 100%;
+  }
+  
+  .categories_controllers {
+    background-color: #f1f3f2;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .category-lists-wrapper {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .category-lists-wrapper li {
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .details {
+    background-color: white;
+    margin-top: 15px;
+    padding: 15px;
+  }
+  
+  .desc {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .desc img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .desc p {
+    color: #b2b2b2;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .desc small {
+    color: #b2b2b2;
+    font-weight: bold;
+  }
+  
+  .transaction small {
+    color: #b2b2b2;
+    padding: 10px 0;
+  }
+  
+  strong {
+    color: black;
+  }
+  
+  hr {
+    background-color: #fefefe71;
+    margin: 10px 0;
+  }
+  
+  .payment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b2b2b2;
+    margin-bottom: 50px;
+  }
