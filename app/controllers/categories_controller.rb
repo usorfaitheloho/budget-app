@@ -5,7 +5,11 @@ class CategoriesController < ApplicationController
     def index
       @categories = Category.where(user: current_user)
     end
-  
+    
+    def show
+        @expenses = @category.exchanges.order(created_at: :desc)
+      end
+
     def new
       @category = Category.new
     end
