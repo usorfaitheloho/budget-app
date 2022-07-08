@@ -11,14 +11,15 @@ class ExchangesController < ApplicationController
     end
 
     def new
+      @category = Category.find(params[:category_id])
         @exchange = Exchange.new
     end
 
     def create
-        @exchange = Exchange.new(exchange_params)
-        @exchange.author = current_user
-        @category = Category.find(params[:category_id])
-        @category.exchanges << @exchange
+      @exchange = Exchange.new(exchange_params)
+      @exchange.author = current_user
+      @category = Category.find(params[:category_id])
+      @category.exchanges << @exchange
     
         respond_to do |format|
           if @exchange.save
