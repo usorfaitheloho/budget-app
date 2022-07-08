@@ -1,0 +1,149 @@
+.category-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.category-btn {
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  background-color: #d6a907;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+.actions {
+  width: 100%;
+}
+
+.categories_controllers {
+  background-color: #f1f3f2;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.category-lists-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.category-lists-wrapper li {
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.details {
+  background-color: white;
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px 2px grey;
+}
+
+.categ_title {
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc {
+  display: flex;
+  gap: 10px;
+}
+
+img {
+  width: 104px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.desc img {
+  width: 40px;
+  height: 40px;
+}
+
+.desc p {
+  color: #b2b2b2;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.desc small {
+  color: #b2b2b2;
+  font-weight: bold;
+}
+
+.transaction small {
+  color: #b2b2b2;
+  padding: 10px 0;
+}
+
+strong {
+  color: black;
+}
+
+hr {
+  background-color: #fefefe71;
+  margin: 10px 0;
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b2b2b2;
+  margin-bottom: 50px;
+}
+
+.sign_out {
+  background: none;
+  font-size: 1.1rem;
+}
+
+.sign_out :hover {
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+.back_btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 100px 5% 100px;
+  max-width: 700px;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category {
+  display: flex;
+  gap: 15px;
+  height: 110px;
+  padding: 8px;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+
+.total_txt {
+  text-align: center;
+  padding-top: 20px;
+}

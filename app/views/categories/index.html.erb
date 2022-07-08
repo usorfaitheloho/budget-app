@@ -1,13 +1,18 @@
-<header class="header">
-  <h2>All Categories</h2>
-  <% button_to "Sign out", destroy_user_session_path, method: :delete %>
-</header>
-
-<section class="categories-section">
-  <p class="notice text-success"><%- notice %></p>
-  <div class="categories">
+<section class="categories-controllers">
+  <header class="input-container">
+    <nav>
+    <ul class="links">
+    <h1 class="categ_title">CATEGORIES</h1>
+    <li class="login">
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "submit" %>
+    </li>
+    </ul>
+    </nav>
+  </header>
+  <div class="content">
+  <div id="categories">
     <% if @categories.length == 0 %>
-      <p class="text-info">No category yet. Add a new one!!!</p>
+      <p class="empty_data text-center">No category yet. Add a new one!!!</p>
     <% else %>
       <% @categories.each do |category| %>
         <%= link_to category_exchanges_path category do %>
@@ -16,7 +21,8 @@
       <% end %>
     <% end %>
     </div>
-    <div class="new_category_btn">
-      <%= link_to "Add New Category", new_category_path %>
-    </div>
+  </div>
+  <div class='category-footer'>
+    <%= button_to "Add Category", new_category_path, method: :get, class: 'category-btn' %>
+  </div>
 </section>
