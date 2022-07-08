@@ -25,7 +25,6 @@ class CategoriesController < ApplicationController
       end
     end
   
-    private
   
     def set_category
       @category = Category.find(params[:id])
@@ -34,4 +33,15 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name, :icon)
     end
+
+    def destroy
+        @category = Category.find(params[:id])
+        if @category.destroy
+          flash[:success] = 'category was successfully deleted.'
+          redirect_to categories_path
+        else
+          flash[:error] = 'Something went wrong'
+          render :show
+        end
+      end
 end

@@ -23,13 +23,20 @@ class ExchangeController < ApplicationController
         respond_to do |format|
           if @exchange.save
             format.html { redirect_to category_exchanges_path(@category), notice: 'Transaction was successfully created.' }
-            format.json { render :show, status: :created, location: @exchange }
           else
             format.html { render :new, status: :unprocessable_entity }
-            format.json { render json: @exchange.errors, status: :unprocessable_entity }
           end
         end
       end
+
+      def destroy
+        @expense.destroy
+    
+        respond_to do |format|
+          format.html { redirect_to category_url(@category), notice: "Exchange was successfully destroyed." }
+        end
+      end
+
      private
      
      def set_exchanges
