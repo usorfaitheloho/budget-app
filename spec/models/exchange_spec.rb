@@ -25,5 +25,4 @@ RSpec.describe Exchange, type: :model do
     @exchange.amount = nil
     expect(@exchange).to_not be_valid
   end
-
 end

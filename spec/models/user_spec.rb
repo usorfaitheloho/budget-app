@@ -28,5 +28,4 @@ RSpec.describe User, type: :model do
     @candy.name = 'a' * 52
     expect(@candy).to_not be_valid
   end
-
 end

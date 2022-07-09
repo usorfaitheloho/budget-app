@@ -35,7 +35,7 @@ RSpec.describe 'categories/index', type: :feature do
     visit categories_path
 
     expect(page).to_not have_content 'TransferMoney'
-    
+
     expect(page).to_not have_content 'CATEGORIES'
   end
 end

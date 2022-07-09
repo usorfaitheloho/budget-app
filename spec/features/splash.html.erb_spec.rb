@@ -46,7 +46,7 @@ RSpec.describe 'login page', type: :feature do
   context 'Testing home page content text' do
     it 'I can see the title of the page and the sign in link.' do
       visit root_path
-      
+
       expect(page).to have_content 'LOG IN'
     end
 

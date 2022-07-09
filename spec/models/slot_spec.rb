@@ -17,5 +17,4 @@ RSpec.describe Slot, type: :model do
   it 'is valid with valid attributes' do
     expect(@slot).to be_valid
   end
-
 end

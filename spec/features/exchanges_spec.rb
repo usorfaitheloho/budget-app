@@ -28,7 +28,5 @@ RSpec.describe 'exchanges/index', type: :feature do
     visit categories_path
 
     expect(page).to_not have_content 'TransferMoney'
-
   end
-
 end

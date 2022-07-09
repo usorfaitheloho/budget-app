@@ -30,5 +30,4 @@ RSpec.describe Category, type: :model do
     @shoes_category.name = 'a' * 40
     expect(@shoes_category).to_not be_valid
   end
-
 end
