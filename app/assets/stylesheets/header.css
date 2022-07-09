@@ -1,53 +1,53 @@
 @font-face {
-    font-family: proximaBold;
-    src: url(Proxima_Nova_Alt_Bold.otf);
-  }
-  
-  html {
-    font-size: 1rem;
-    font-family: proximaBold, sans-serif;
-  }
-  
-  .splash-screen-container {
-    background-color: #f1f3f2;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .logo h1 {
-    font-family: proximaBold, sans-serif;
-  }
-  
-  .nav {
-    position: absolute;
-    bottom: 5%;
-    width: 90%;
-    margin: auto;
-  }
-  
-  .login a {
-    background-color: #3778c2;
-    color: white;
-  }
-  
-  .signup a {
-    color: #a5a6a9;
-  }
-  
-  .nav ul li {
-    list-style-type: none;
-    margin-bottom: 5px;
-  }
-  
-  .nav ul li a {
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
-  }
+  font-family: proximaBold;
+  src: url(Proxima_Nova_Alt_Bold.otf);
+}
+
+html {
+  font-size: 1rem;
+  font-family: proximaBold, sans-serif;
+}
+
+.splash-screen-container {
+  background-color: #f1f3f2;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo h1 {
+  font-family: proximaBold, sans-serif;
+}
+
+.nav {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  margin: auto;
+}
+
+.login a {
+  background-color: #3778c2;
+  color: white;
+}
+
+.signup a {
+  color: #a5a6a9;
+}
+
+.nav ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}

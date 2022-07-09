@@ -4,117 +4,113 @@
  *= require font-awesome
  */
 
- @font-face {
-    font-family: proximaThin;
-    src: url(Proxima_Nova_Alt_Thin.otf);
-  }
-  
-  *,
-  ::before,
-  ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  html {
-    font-size: 1rem;
-    font-family: proximaThin, sans-serif;
-  }
-  
-  body {
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--background-primary-color);
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  a {
-    text-decoration: none;
-  }
+@font-face {
+  font-family: proximaThin;
+  src: url(Proxima_Nova_Alt_Thin.otf);
+}
 
-  li {
-    list-style-type: none;
-  }
-  
-  
-  .user-input-container {
-    background-color: #f1f3f2;
-    width: 100%;
-    min-height: 100vh;
-  }
-  
-  .input-container {
-    background-color: #3778c2;
-    color: white;
-  }
-  
-  .links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;
-  }
-  
-  .links li,
-  .links li a {
-    display: flex;
-  }
-  
-  .links li a i {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 300;
-  }
-  
-  .form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .field {
-    width: 100%;
-  }
-  
-  .form input {
-    width: 100%;
-    padding: 15px 10px;
-    border: 1px solid #f1f3f2;
-  }
-  
-  ::placeholder {
-    color: #c3c4c6;
-  }
-  
-  .forgot-password {
-    text-align: center;
-    display: block;
-    color: #c3c4c6;
-    margin-top: 10px;
-  }
-  
-  .submit {
-    border: none;
-    outline: none;
-    color: white;
-    background: none;
-    font-size: 1rem;
-  }
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-  .expense-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60px;
-  }
+html {
+  font-size: 1rem;
+  font-family: proximaThin, sans-serif;
+}
 
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-primary-color);
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.user-input-container {
+  background-color: #f1f3f2;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.links li,
+.links li a {
+  display: flex;
+}
+
+.links li a i {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.field {
+  width: 100%;
+}
+
+.form input {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #f1f3f2;
+}
+
+::placeholder {
+  color: #c3c4c6;
+}
+
+.forgot-password {
+  text-align: center;
+  display: block;
+  color: #c3c4c6;
+  margin-top: 10px;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  color: white;
+  background: none;
+  font-size: 1rem;
+}
+
+.expense-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #3778c2;
+  color: white;
+}
