@@ -1,0 +1,54 @@
+<section class="user-input-container">
+   <header class="input-container">
+    <nav>
+      <ul class='links'>
+        <li>
+        <%= link_to splash_index_path do %>
+          <i class="fa fa-arrow-left"></i>
+          <% end %>
+        <li>
+        <li>
+          REGISTER
+        <li>
+        <li class='login'>
+          <input type="submit" value='Next' form='form' class='submit'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form', :id => 'form' } ) do |f| %>
+
+  <%= render "users/shared/error_messages", resource: resource %>
+   
+    <%
+=begin%>
+ <div class="avatar-profile">
+      <div class="image-container">
+        <%= if @users.avatar.attached? %>
+          <img src="<%= (url_for(@users.avatar)) %>">
+        <% end %>
+      </div>
+      
+      <%= f.file_field :avatar %>
+      <%= f.label :avatar, "Upload picture" %>
+    </div> 
+<%
+=end%>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Full name" %>
+  </div>
+    
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+  </div>
+
+<% end %>
+
+<%= render "users/shared/links" %>
+</section>
+
