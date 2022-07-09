@@ -1,16 +1,18 @@
 <section class="categories-controllers">
   <header class="input-container">
-    <div class="menu clickable">
-      <div class="item1"></div>
-      <div class="item2"></div>
-      <div class="item3"></div>
-    </div>
-    <h2 class="text_white categ_title">CATEGORIES</h2>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "sign_out text_white" %>
+    <nav>
+    <ul class="links">
+    <h1 class="categ_title">CATEGORIES</h1>
+    <li class="login">
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "submit" %>
+    </li>
+    </ul>
+    </nav>
   </header>
-  <div class="category-lists-wrapper">
+  <div class="content">
+  <div id="categories">
     <% if @categories.length == 0 %>
-      <p class="empty_data">No category yet. Add a new one!!!</p>
+      <p class="empty_data text-center">No category yet. Add a new one!!!</p>
     <% else %>
       <% @categories.each do |category| %>
         <%= link_to category_exchanges_path category do %>
@@ -18,6 +20,7 @@
         <% end %>
       <% end %>
     <% end %>
+    </div>
   </div>
   <div class='category-footer'>
     <%= button_to "Add Category", new_category_path, method: :get, class: 'category-btn' %>

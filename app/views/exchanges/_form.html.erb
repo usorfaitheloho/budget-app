@@ -1,5 +1,5 @@
 <div class="forms_section">
-  <%= form_with(model: exchange, url: category_exchanges_path) do |form| %>
+ <%= form_with model: exchange, url: category_exchanges_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
     <% if exchange.errors.any? %>
       <div style="color: red">
         <h2><%= pluralize(exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
@@ -22,8 +22,8 @@
       <%= form.number_field :amount, min: 0, placeholder: "Enter the transaction's amount" %>
     </div>
 
-    <div class="field">
-      <%= form.submit 'Add New Transaction', class: "bg_col_blue new_category_btn" %>
+    <div class="actions">
+      <%= form.submit 'Add New Transaction', class: "category-btn" %>
     </div>
   <% end %>
 </div>

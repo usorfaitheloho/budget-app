@@ -1,13 +1,13 @@
-<section class="new_transaction">
-  <div class="header">
-    <div class="justify-self-start">
+<section class="user-input-container">
+  <header class="input-container">
+    <div class="links">
       <%= link_to category_exchanges_path , method: :get, class: "back_btn text_white" do %>
-          <span class="back">&#8701;</span>
+        <i class="fa fa-arrow-left"></i>
       <% end %>
     </div>
     <h2 class="text_white">Create New Transaction</h2>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "sign_out text_white" %>
-  </div>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "submit" %>
+  </header>
   <div class="center">
     <%= render "form", exchange: @exchange %>
   </div>
