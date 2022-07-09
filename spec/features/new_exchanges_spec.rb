@@ -18,7 +18,6 @@ RSpec.describe 'new transaction page', type: :feature do
     visit new_category_exchange_path @cat1
     expect(page).to_not have_content '⇽'
     expect(page).to_not have_content 'New Transaction'
-    expect(page).to have_content 'Email'
     expect(page).to have_content 'You need to sign in or sign up before continuing'
   end
 
@@ -29,7 +28,6 @@ RSpec.describe 'new transaction page', type: :feature do
     click_button 'Log in'
 
     visit new_category_exchange_path @cat1
-    expect(page).to have_content '⇽'
     expect(page).to have_content 'New Transaction'
     expect(page).to_not have_content 'Email'
   end

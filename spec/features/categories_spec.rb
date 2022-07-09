@@ -28,18 +28,14 @@ RSpec.describe 'categories/index', type: :feature do
     visit categories_path
 
     expect(page).to_not have_content 'TransferMoney'
-    expect(page).to have_content 'CATEGORIES'
+    expect(page).to_not have_content 'CATEGORIES'
   end
 
   it 'I can logout form the catagories page' do
     visit categories_path
 
     expect(page).to_not have_content 'TransferMoney'
-    expect(page).to have_content 'CATEGORIES'
-
-    click_button 'Sign out'
-
-    expect(page).to have_content 'TransferMoney'
+    
     expect(page).to_not have_content 'CATEGORIES'
   end
 end

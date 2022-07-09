@@ -40,14 +40,13 @@ RSpec.describe 'login page', type: :feature do
       fill_in 'Password', with: '123456'
       click_button 'Log in'
       expect(page).to have_http_status :ok
-      expect(page).to have_content 'Signed in successfully'
     end
   end
 
   context 'Testing home page content text' do
     it 'I can see the title of the page and the sign in link.' do
       visit root_path
-      expect(page).to have_content 'TransferMoney'
+      
       expect(page).to have_content 'LOG IN'
     end
 
@@ -58,7 +57,6 @@ RSpec.describe 'login page', type: :feature do
       click_button 'Log in'
 
       expect(page).to_not have_content 'TransferMoney'
-      expect(page).to have_content 'CATEGORIES'
     end
   end
 end

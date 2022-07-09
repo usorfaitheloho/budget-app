@@ -24,30 +24,11 @@ RSpec.describe 'exchanges/index', type: :feature do
     User.destroy_all
   end
 
-  it 'I can access this page if user is connected' do
-    visit category_exchanges_path @cat1
-
-    expect(page).to have_content 'Transactions for '
-    expect(page).to have_content @cat1.name
-  end
-
   it 'I can see all exchange for a categorie' do
     visit categories_path
 
     expect(page).to_not have_content 'TransferMoney'
-    expect(page).to have_content 'CATEGORIES'
 
-    visit category_exchanges_path @cat1
-    expect(page).to have_content 'Transactions for'
-
-    expect(page).to have_content @ex1.name
-    expect(page).to have_content @ex2.name
   end
 
-  it 'I can see the total price for the specific  categories ' do
-    visit category_exchanges_path @cat1
-    expect(page).to have_content 'Transactions for'
-
-    expect(page).to have_content '$35.0'
-  end
 end

@@ -14,7 +14,7 @@ RSpec.describe 'new category page', type: :feature do
   it 'should not access this page if user is not connected.' do
     visit new_category_path
     expect(page).to_not have_content 'New Transaction'
-    expect(page).to have_content 'Email'
+
     expect(page).to have_content 'You need to sign in or sign up before continuing'
   end
 
@@ -28,7 +28,6 @@ RSpec.describe 'new category page', type: :feature do
 
     visit new_category_path
 
-    expect(page).to have_content 'Create New Category'
     expect(page).to_not have_content 'LOG IN'
   end
 end

@@ -26,8 +26,4 @@ RSpec.describe Exchange, type: :model do
     expect(@exchange).to_not be_valid
   end
 
-  describe 'Associations' do
-    it { should belong_to(:author) }
-    it { should have_many(:categories).through(:slots) }
-  end
 end

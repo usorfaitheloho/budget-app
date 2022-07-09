@@ -18,8 +18,4 @@ RSpec.describe Slot, type: :model do
     expect(@slot).to be_valid
   end
 
-  describe 'associations' do
-    it { should belong_to(:category) }
-    it { should belong_to(:exchange) }
-  end
 end
