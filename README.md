@@ -9,7 +9,7 @@ A Budget-app is mobile web application where you can manage your budget: you hav
 
 ## Live Version
 
-[See Live Version](https://budgettransaction-app.herokuapp.com/)
+[See Live Version](https://budgety-now.herokuapp.com/)
 [Demo Video](https://www.loom.com/share/5147b906ad064f0b937a2ec2de1b4243)
 ## Built With
 
