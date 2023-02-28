@@ -1,6 +1,6 @@
 <div class="forms_section">
- <%= form_with model: exchange, url: category_exchanges_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
-    <% if exchange.errors.any? %>
+ <%= form_with model: @exchange, url: category_exchanges_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
+    <% if @exchange.errors.any? %>
       <div style="color: red">
         <h2><%= pluralize(exchange.errors.count, "error") %> prohibited this exchange from being saved:</h2>
 

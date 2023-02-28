@@ -1,28 +1,47 @@
-<section class="categories-controllers">
-  <header class="input-container">
-    <nav>
-    <ul class="links">
-    <h1 class="categ_title">CATEGORIES</h1>
-    <li class="login">
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "submit" %>
-    </li>
-    </ul>
-    </nav>
-  </header>
-  <div class="content">
-  <div id="categories">
-    <% if @categories.length == 0 %>
-      <p class="empty_data text-center">No category yet. Add a new one!!!</p>
-    <% else %>
-      <% @categories.each do |category| %>
-        <%= link_to category_exchanges_path category do %>
-          <%= render category %>
-        <% end %>
-      <% end %>
-    <% end %>
+<section class='categories_controllers'>
+  <header class="category-header">
+    <div class="user-info">
+    
+      <div class="user-details">
+        <p class="welcome">Welcome!</p>
+        <h2 class="user-name"><%= current_user.name %></h2>
+      </div>
     </div>
-  </div>
-  <div class='category-footer'>
-    <%= button_to "Add Category", new_category_path, method: :get, class: 'category-btn' %>
-  </div>
+    <li class="logout">
+      <%= button_to "Logout", destroy_user_session_path(current_user), method: :delete %>
+    </li>
+  </header>
+  <div class="category-section">
+     <h2 class="all-transaction">All Transactions</h2>
+     <div class="add-category-wrapper">
+        <div class="add-new-category">
+          <%= button_to "+", new_category_path, method: :get, class: 'category-btnn' %>
+        </div>
+        <p>Create new category</p>
+     </div>
+     <% if @categories.exists? %>
+      <ul class="category-lists-wrapper">
+          <% @categories.each do |category| %>
+           <%= link_to category_path(category.id), method: :get do %>
+          <li>
+
+            <div class='desc'>
+            <ion-icon name="<%= category.icon %>" class="list-image transaction-img <%= category.icon %>"></ion-icon>
+              <span class="desc-text">
+                <p><%= category.name %></p>
+                <small><%= category.created_at.to_date.strftime("%d %b, %Y") %></small>
+              </span>
+            </div>
+              <p class='strong'>- $<%= category.exchanges.sum(:amount) || '0.00'%>
+
+              </p>
+          </li>
+          <% end %>
+          <% end %>
+      </ul>
+   <% else %>
+          <p class="nil-category">No Category Added yet</p>
+      <% end %>
+  <div>
+</div>
 </section>

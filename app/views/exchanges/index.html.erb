@@ -1,35 +1,21 @@
-<section class="categories-controllers">
+<section class="user-input-container">
   <header class="input-container">
-  <nav>
-    <ul class="links">
-    <div class="justify-self-start">
-      <%= link_to categories_path, class: "submit" do %>
-          <span class="back-btn"><i class="fa fa-angle-left"></i></span>
-      <% end %>
-    </div>
-    <h2 class="categ_title">Transactions for <span><%= @category.name %></span></h2>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "submit" %>
-    </ul>
-  </nav>
+    <nav>
+      <ul class='links'>
+        <li>
+        <%= link_to categories_path do %>
+          <i class="fa fa-arrow-left"></i>
+          <% end %>
+        </li>
+        <li>
+          ADD TRANSACTION
+        </li>
+        <li class='login'>
+          <input type="submit" value='Add' form='form' class='submit'>
+        </li>
+      </ul>
+    </nav>
   </header>
-
-  <div class="total_txt text-center">TOTAL: $<%=@category.total_amount%> </div>
-
-  <div class="content">
-  <div id="categories">
   
-    <% if @exchanges.length == 0 %>
-      <p class="empty_data text-center">No transaction yet. Add a new one!!!</p>
-    <% else %>
-      <% @exchanges.each do |exchange| %>
-        <%= render exchange %>
-      <% end %>
-    <% end %>
-    
-  </div>
-  </div>
-
-  <div class="category-footer">
-    <%= button_to "New Transaction", new_category_exchange_path(@category), method: :get, class: "category-btn" %>
-  </div>
+   <%= render partial: "form", locals: { exchange: @exchange, categories: @categories } %>
 </section>
