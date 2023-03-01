@@ -16,9 +16,9 @@
       </ul>
     </nav>
   </header>
+  <section class="form-section">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form', :id => 'form' }) do |f| %>
-    
-    
+  
     <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
     </div>
@@ -27,7 +27,11 @@
       <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
     </div>
 
+     <div class='field'>
+        <input type="submit" value='Continue' id='submit-btn'>
+    </div>
   <% end %>
 
   <%= render "users/shared/links" %>
+  </section>
 </section>
