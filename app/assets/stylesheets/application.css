@@ -4,7 +4,6 @@
  *= require font-awesome
  */
 
-
 *,
 ::before,
 ::after {
@@ -13,7 +12,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 
 html {
   font-size: 1rem;
@@ -162,8 +160,6 @@ li {
 .success {
   color: green;
 }
-
-
 
 @media only screen and (min-width: 768px) {
   .nav {
