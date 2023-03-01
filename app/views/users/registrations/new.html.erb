@@ -16,24 +16,14 @@
       </ul>
     </nav>
   </header>
+  <section class="form-section">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form', :id => 'form' } ) do |f| %>
 
   <%= render "users/shared/error_messages", resource: resource %>
-   
-    <%
-=begin%>
- <div class="avatar-profile">
-      <div class="image-container">
-        <%= if @users.avatar.attached? %>
-          <img src="<%= (url_for(@users.avatar)) %>">
-        <% end %>
-      </div>
-      
+  
+   <div class="avatar_field">
       <%= f.file_field :avatar %>
-      <%= f.label :avatar, "Upload picture" %>
-    </div> 
-<%
-=end%>
+    </div>
 
   <div class="field">
     <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Full name" %>
@@ -45,10 +35,18 @@
 
   <div class="field">
     <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <% if @minimum_password_length %>
+          <br />
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+  </div>
+  <div class='field'>
+    <input type="submit" value='Continue' id='submit-btn'>
   </div>
 
 <% end %>
 
 <%= render "users/shared/links" %>
+  </section>
 </section>
 
