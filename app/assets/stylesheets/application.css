@@ -14,6 +14,12 @@
   scroll-behavior: smooth;
 }
 
+
+html {
+  font-size: 1rem;
+  font-family: proximaThin, sans-serif;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -104,6 +110,16 @@ li {
 }
 
 .submit {
+  border: none;
+  outline: none;
+  color: black;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submit-btn {
   padding: 18px 10px;
   text-align: center;
   background-color: black;
@@ -145,4 +161,36 @@ li {
 
 .success {
   color: green;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    bottom: 20%;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav ul li a {
+    padding: 10px 30px;
+  }
+
+  .form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #submit-btn {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
