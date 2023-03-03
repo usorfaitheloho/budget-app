@@ -7,9 +7,14 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "header" %>
+    <%= stylesheet_link_tag "category" %>
   </head>
 
   <body>
     <%= yield %>
+    <% flash.each do |name, message| %>
+    <div class="<%= name %>"><%= message %></div>
+    <% end %>
   </body>
 </html>

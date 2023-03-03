@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag "splash"  %>
+
+<header class="splash-screen-container">
+    <div class="overlay">
+        <h1 class="title"> Budgetry </h1>
+        <div class="splash-image">
+            <%= image_tag 'wallet.png', class: 'splash-illustration' %>
+        </div>
+        <div class="intro-text">
+            <h2> The money app your future needs </h2>
+            <p> Helps you make smart money decisions that will impact your life </p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="login">
+                    <%= link_to "Login", new_user_session_path, method: :get  %>
+                </li>
+                <li class="signup">
+                    <%= link_to "Sign up", new_user_registration_path, method: :get  %>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

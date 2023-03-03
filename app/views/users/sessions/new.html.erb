@@ -1,0 +1,37 @@
+<section class="user-input-container">
+  <header class="input-container">
+    <nav>
+      <ul class='links'>
+        <li>
+        <%= link_to splash_index_path do %>
+          <i class="fa fa-arrow-left"></i>
+          <% end %>
+        <li>
+        <li>
+          LOGIN
+        <li>
+        <li class='login'>
+          <input type="submit" value='Log in' form='form' class='submit'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="form-section">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form', :id => 'form' }) do |f| %>
+  
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
+    </div>
+
+     <div class='field'>
+        <input type="submit" value='Continue' id='submit-btn'>
+    </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+  </section>
+</section>
